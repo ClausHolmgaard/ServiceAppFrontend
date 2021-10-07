@@ -8,8 +8,6 @@ COPY service-app-web/package.json .
 
 RUN npm install
 
-#COPY service-app-web .
-
 #CMD ["ng", "serve", "--host", "0.0.0.0"]
 CMD ["tail", "-f", "/dev/null"]
 
@@ -17,6 +15,8 @@ CMD ["tail", "-f", "/dev/null"]
 FROM node:14-alpine AS production
 
 WORKDIR /app
+
+RUN npm install -g @angular/cli
 
 COPY --from=builder /app .
 
