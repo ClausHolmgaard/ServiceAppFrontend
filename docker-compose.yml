@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  frontend:
+    image: clausholmgaard/service-app-frontend
+    build:
+      context: ${ServiceAppFrontend:-.}
+      dockerfile: Dockerfile
+    env_file:
+      - ${ServiceAppFrontend:-.}/env/frontend.all

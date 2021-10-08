@@ -1,6 +1,6 @@
 {
-	"name": "Testing Remote Container",
-	"dockerComposeFile": ["../../ServiceAppRunner/docker-compose.yml", "../../ServiceAppRunner/docker-compose.dev.yml"],
+	"name": "develop frontend in container",
+	"dockerComposeFile": ["../docker-compose.yml", "../docker-compose.dev.yml"],
 	"service": "frontend",
 	"workspaceFolder": "/app",
 	"shutdownAction": "stopCompose",
